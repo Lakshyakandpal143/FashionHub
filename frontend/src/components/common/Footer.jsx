@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { FiPhoneCall } from 'react-icons/fi'
 const Footer = () => {
     return (
-        <footer className='border-t border-gray-300 mt-2 py-12'>
+        <footer className='border-t border-gray-300 mt-2 pt-12 pb-6'>
             <div className='container mx-auto pl-4 grid grid-cols-1 md:grid-cols-4 gap-8 px-4 lg:px-0'>
                 <div className='ml-2'>
                     <h3 className='text-lg text-gray-800 mb-4'>Newsletter</h3>
@@ -76,9 +76,11 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div className='container mx-auto mt-8 px-5 lg:px-0 border-t border-gray-300 pt-6 '>
-                <p className='text-gray-500 text-sm tracking-tighter text-center'>© 2025, CompileTab. All Rights Reserved. </p>
-                <p className='text-gray-500 text-sm tracking-tighter text-center'>Made with &hearts; by Lakshya. </p>
+            <div className='border-t  border-gray-300 mt-8'>
+                <div className='container mx-auto  px-5 lg:px-0 pt-6'>
+                    <p className='text-gray-500 text-sm tracking-tighter text-center'>© 2025, CompileTab. All Rights Reserved. </p>
+                    <p className='text-gray-500 text-sm tracking-tighter text-center'>Made with &hearts; by Lakshya. </p>
+                </div>
             </div>
         </footer>
     )

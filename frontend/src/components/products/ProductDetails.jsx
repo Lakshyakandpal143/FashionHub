@@ -28,10 +28,10 @@ const similarProducts = [
         _id: 1,
         name: "Product",
         price: 120,
-        images: [{ url: "https://picsum.photos/500/500?random=1" }],
+        images: [{ url: "https://picsum.photos/500/500?random=13" }],
     },
     {
-        _id: 12,
+        _id: 2,
         name: "Product",
         price: 120,
         images: [{ url: "https://picsum.photos/500/500?random=2" }],
