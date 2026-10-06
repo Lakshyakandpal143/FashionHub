@@ -20,6 +20,7 @@ FashionHub is a full-stack e-commerce web application designed to provide users 
 - JavaScript
 - HTML
 - CSS
+- Vite
 
 ### Backend
 - Node.js
@@ -38,3 +39,9 @@ FashionHub is a full-stack e-commerce web application designed to provide users 
 ```text
 FashionHub/
 └── frontend/
+    ├── public/
+    ├── src/
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    └── README.md
