@@ -1,16 +1,20 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { HiMagnifyingGlass, HiMiniXMark } from 'react-icons/hi2';
-import { Form } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+
     const handleSearchToggle = () => {
         setIsOpen(!isOpen);
     };
     const handleSearch = (e) => {
         e.preventDefault();
-        console.log("Search term: ", searchTerm);
+        const term = searchTerm.trim();
+        if (term) navigate(`/collections/all?search=${encodeURIComponent(term)}`);
+        setSearchTerm("");
         setIsOpen(false);
     };
     return (
@@ -18,7 +22,7 @@ const Search = () => {
             {isOpen ? (
                 <form onSubmit={handleSearch} className='relative flex items-center justify-center w-full'>
                     <div className='relative w-1/2'>
-                        <input type="text" placeholder='Search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='bg-gray-100 px-4 py-2 pr-12 rounded-lg focus:outline-none w-full placeholder:text-gray-700'
+                        <input type="text" autoFocus placeholder='Search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='bg-gray-100 px-4 py-2 pr-12 rounded-lg focus:outline-none w-full placeholder:text-gray-700'
                         />
                         <button type='submit' className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600'>
                             <HiMagnifyingGlass className='h-6 w-6 hover:text-[#C1444F]' />
